@@ -23,7 +23,6 @@ CREATE TABLE contact_messages (
     lastname VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     country VARCHAR(100) NOT NULL,
-    newsletter BOOLEAN DEFAULT FALSE,
     message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

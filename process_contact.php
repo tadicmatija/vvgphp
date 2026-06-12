@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastname = trim($_POST['lastname']);
     $email = trim($_POST['email']);
     $country = trim($_POST['country']);
-    $newsletter = isset($_POST['newsletter']) ? 1 : 0;
     $message = trim($_POST['message']);
 
     try {
@@ -19,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $lastname,
             $email,
             $country,
-            $newsletter,
             $message
         ]);
 

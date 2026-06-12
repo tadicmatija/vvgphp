@@ -101,11 +101,6 @@ include 'config.php';
                         </select>
                     </div>
 
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
-                        <label class="form-check-label" for="newsletter">Subscribe to newsletter</label>
-                    </div>
-
                     <div class="mb-3">
                         <label for="message" class="form-label">Message *</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
@@ -117,7 +112,8 @@ include 'config.php';
 
             <div class="col-md-6 mb-4">
                 <div class="map-container" style="height: 450px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7890741539636!2d15.966758816056517!3d45.795453279106205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d68b5d094979%3A0xda8bfa8459b67560!2sUl.+Vrbik+VIII%2C+10000%2C+Zagreb!5e0!3m2!1shr!2shr!4v1509296660756" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.830336855101!2d16.071352176663396!3d45.714440416706964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667e543ebb2c65%3A0xe159703d90972cf3!2sUniversity%20of%20Applied%20Sciences%20Velika%20Gorica!5e0!3m2!1sen!2shr!4v1781265696478!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -139,19 +135,5 @@ include 'config.php';
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<footer class="bg-dark text-white py-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; <?php echo date('Y'); ?>  Matija Tadić - Veleučilište Velika Gorica</p>
-            </div>
-            <div class="col-md-6 text-end">
-                <a href="https://github.com/your-username/your-repo" target="_blank" class="text-white">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
 </html>

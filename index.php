@@ -57,6 +57,30 @@ include 'config.php';
 
     <main class="container my-4">
         <h1 class="mb-4">Welcome to Our Website</h1>
+        <?php
+        $weather_url = "https://api.open-meteo.com/v1/forecast?latitude=45.7126&longitude=16.0756&current=temperature_2m,wind_speed_10m&timezone=Europe%2FZagreb";
+
+        $weather_json = file_get_contents($weather_url);
+        $weather = json_decode($weather_json, true);
+        ?>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Vrijeme - Velika Gorica
+                    </div>
+                    <div class="card-body">
+                        <?php if($weather): ?>
+                            <p>Temperatura: <?php echo $weather['current']['temperature_2m']; ?> °C</p>
+                            <p>Brzina vjetra: <?php echo $weather['current']['wind_speed_10m']; ?> km/h</p>
+                        <?php else: ?>
+                            <p>Weather data is currently unavailable.</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row mb-4">
             <div class="col-md-6">
@@ -64,7 +88,7 @@ include 'config.php';
                 <article>
                     <h2>Featured Article</h2>
                     <p>This is our featured article about the latest developments in technology. We explore the newest trends and innovations that are shaping our future.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <a href="article.php?id=1" class="btn btn-primary">Read More</a>
                 </article>
             </div>
         </div>

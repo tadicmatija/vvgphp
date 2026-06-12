@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$name, $lastname, $email, $username, $password]);
 
         // Redirect to admin page instead of homepage
-        header("Location: admin.php?success=registered");
+        header("Location: login.php?success=registered");
         exit();
 
     } catch (PDOException $e) {

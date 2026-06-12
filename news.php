@@ -58,40 +58,40 @@ include 'config.php';
     <main class="container my-4">
         <h1 class="mb-4">Latest News</h1>
 
-        <article class="mb-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="images/tech-innovation.jpg" alt="Technology Innovation" class="img-fluid mb-3" style="width: 250px; height: 100px !important; object-fit: cover;">
-                </div>
-                <div class="col-md-6">
-                    <h2>Breakthrough in Technology Innovation</h2>
-                    <p class="text-muted">Published: January 15, 2024</p>
-                    <p>A groundbreaking development in artificial intelligence has revolutionized how we approach machine learning. 
-                    This new technology promises to make AI more accessible and efficient for businesses of all sizes.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
-        </article>
-
         <div class="row">
-            <div class="col-md-6 mb-4">
-                <article>
-                    <img src="images/sustainable-energy.jpg" alt="Sustainable Energy" class="img-fluid mb-3" style="width: 250px; height: 100px !important; object-fit: cover;">
-                    <h2>Advances in Sustainable Energy</h2>
-                    <p class="text-muted">Published: January 14, 2024</p>
-                    <p>New developments in solar technology have increased energy efficiency by 40%. 
-                    These advancements could make renewable energy more accessible to developing nations.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-md-4 mb-4">
+                <article class="card h-100">
+                    <img src="images/tech-innovation.jpg" class="card-img-top" alt="Technology Innovation" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Breakthrough in Technology Innovation</h2>
+                        <p class="text-muted">Published: January 15, 2024</p>
+                        <p class="card-text">A groundbreaking development in artificial intelligence has revolutionized how we approach machine learning.</p>
+                        <a href="article.php?id=2" class="btn btn-primary">Read More</a>
+                    </div>
                 </article>
             </div>
-            <div class="col-md-6 mb-4">
-                <article>
-                    <img src="images/digital-transformation.jpg" alt="Digital Transformation" class="img-fluid mb-3" style="width: 250px; height: 100px !important; object-fit: cover;">
-                    <h2>Digital Transformation Trends</h2>
-                    <p class="text-muted">Published: January 13, 2024</p>
-                    <p>Companies worldwide are embracing digital transformation at an unprecedented rate. 
-                    Learn about the key trends shaping the future of business technology.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+
+            <div class="col-md-4 mb-4">
+                <article class="card h-100">
+                    <img src="images/sustainable-energy.jpg" class="card-img-top" alt="Sustainable Energy" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Advances in Sustainable Energy</h2>
+                        <p class="text-muted">Published: January 14, 2024</p>
+                        <p class="card-text">New developments in solar technology have increased energy efficiency by 40%.</p>
+                        <a href="article.php?id=3" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <article class="card h-100">
+                    <img src="images/digital-transformation.jpg" class="card-img-top" alt="Digital Transformation" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Digital Transformation Trends</h2>
+                        <p class="text-muted">Published: January 13, 2024</p>
+                        <p class="card-text">Companies worldwide are embracing digital transformation at an unprecedented rate.</p>
+                        <a href="article.php?id=4" class="btn btn-primary">Read More</a>
+                    </div>
                 </article>
             </div>
         </div>
