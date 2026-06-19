@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = trim($_POST['message']);
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO contact_messages (name, lastname, email, country, newsletter, message) 
-                              VALUES (?, ?, ?, ?, ?, ?)");
-        
+        $stmt = $pdo->prepare("INSERT INTO contact_messages (name, lastname, email, country, message) 
+                               VALUES (?, ?, ?, ?, ?)");
+
         $stmt->execute([
             $name,
             $lastname,
@@ -25,8 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
 
     } catch (PDOException $e) {
-        error_log("Error saving contact message: " . $e->getMessage());
-        
         header('Location: contact.php?status=error');
         exit();
     }

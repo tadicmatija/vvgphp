@@ -36,39 +36,39 @@ if(!$article)
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">PHP projekt</a>
+            <a class="navbar-brand" href="index.php">News portal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="index.php">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="news.php">News</a>
+                        <a class="nav-link active" href="news.php">Vijesti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="contact.php">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About Us</a>
+                        <a class="nav-link" href="about.php">O nama</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.php">Administration</a>
+                        <a class="nav-link" href="admin.php">Administracija</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <?php if(!isset($_SESSION['user_id'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="register.php">Register</a>
+                            <a class="nav-link" href="register.php">Registracija</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Login</a>
+                            <a class="nav-link" href="login.php">Prijava</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
+                            <a class="nav-link" href="logout.php">Odjava</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -77,23 +77,25 @@ if(!$article)
     </nav>
 
     <main class="container my-4">
-        <article>
-            <h1 class="mb-3"><?php echo $article['title']; ?></h1>
-
-            <p class="text-muted">
-                Published: <?php echo date('F j, Y', strtotime($article['created_at'])); ?>
-            </p>
-
+        <article class="card shadow-sm">
             <?php if(!empty($article['image_path'])): ?>
                 <img src="<?php echo $article['image_path']; ?>" 
-                     alt="<?php echo $article['title']; ?>" 
-                     class="img-fluid mb-4"
-                     style="width: 600px; height: 300px; object-fit: cover;">
+                    alt="<?php echo $article['title']; ?>" 
+                    class="card-img-top"
+                    style="height: 320px; object-fit: cover;">
             <?php endif; ?>
 
-            <p><?php echo $article['content']; ?></p>
+            <div class="card-body">
+                <h1 class="mb-3"><?php echo $article['title']; ?></h1>
 
-            <a href="news.php" class="btn btn-secondary mt-3">Back to News</a>
+                <p class="text-muted">
+                    Objavljeno: <?php echo date('d.m.Y.', strtotime($article['created_at'])); ?>
+                </p>
+
+                <p><?php echo nl2br($article['content']); ?></p>
+
+                <a href="news.php" class="btn btn-secondary mt-3">Povratak na vijesti</a>
+            </div>
         </article>
     </main>
 

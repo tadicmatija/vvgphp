@@ -22,32 +22,32 @@ include 'config.php';
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>" href="index.php">Home</a>
+                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>" href="index.php">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'news.php' ? 'active' : ''; ?>" href="news.php">News</a>
+                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'news.php' ? 'active' : ''; ?>" href="news.php">Vijesti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>" href="contact.php">Contact</a>
+                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>" href="contact.php">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>" href="about.php">About Us</a>
+                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>" href="about.php">O nama</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'admin.php' ? 'active' : ''; ?>" href="admin.php">Administration</a>
+                        <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'admin.php' ? 'active' : ''; ?>" href="admin.php">Administracija</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <?php if(!isset($_SESSION['user_id'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'active' : ''; ?>" href="register.php">Register</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'active' : ''; ?>" href="register.php">Registracija</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'active' : ''; ?>" href="login.php">Login</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'active' : ''; ?>" href="login.php">Prijava</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
+                            <a class="nav-link" href="logout.php">Odjava</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -56,25 +56,25 @@ include 'config.php';
     </nav>
 
     <main class="container my-4">
-        <h1 class="mb-4">Login to Your Account</h1>
+        <h1 class="mb-4">Prijavi se u svoj račun</h1>
 
         <div class="row">
             <div class="col-md-6 mb-4">
                 <form action="process_login.php" method="POST">
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username *</label>
+                        <label for="username" class="form-label">Korisničko ime *</label>
                         <input type="text" class="form-control" id="username" name="username" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password *</label>
+                        <label for="password" class="form-label">Lozinka *</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary">Prijava</button>
                     
                     <div class="mt-3">
-                        <p class="mb-0">Don't have an account? <a href="register.php">Register here</a></p>
+                        <p class="mb-0">Nemaš račun? <a href="register.php">Registriraj se ovdje</a></p>
                     </div>
                 </form>
 
@@ -89,7 +89,7 @@ include 'config.php';
             </div>
             <div class="col-md-6 mb-4">
                 <img src="images/login-image.jpg" alt="Welcome Back" class="img-fluid rounded shadow" style="width: 300px; height: 200px !important; object-fit: cover;">
-                <p class="text-muted mt-2">Welcome back! Sign in to access your account</p>
+                <p class="text-muted mt-2">Dobrodošao nazad! Prijavi se za pristup svom računu</p>
             </div>
         </div>
     </main>
