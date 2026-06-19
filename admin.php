@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin')
     exit();
 }
 
-// Fetch users from database
+
 try {
     $stmt = $pdo->query("SELECT * FROM users ORDER BY created_at DESC");
     $users = $stmt->fetchAll();
@@ -26,7 +26,6 @@ try {
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">PHP projekt</a>
@@ -100,8 +99,6 @@ try {
                 </div>
             </div>
         </div>
-
-        <!-- Users Display -->
         <div class="card shadow-sm mb-4">
             <div class="card-header">
                 <h2 class="h5 mb-0">Korisnici</h2>
@@ -162,7 +159,6 @@ try {
             </div>
         </div>
 
-        <!-- Edit Modal -->
         <div class="modal fade" id="editModal" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -190,7 +186,6 @@ try {
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
             <div class="row">
